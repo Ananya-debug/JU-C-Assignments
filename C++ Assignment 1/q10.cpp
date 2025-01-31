@@ -6,43 +6,34 @@ using namespace std;
 class VolumeCalculator
 {
 public:
-    // Volume of Cube: V = a³
     double volume(double side)
     {
         return side * side * side;
     }
-
-    // Volume of Cuboid: V = l × w × h
     double volume(double length, double width, double height)
     {
         return length * width * height;
     }
-
-    // Volume of Cone: V = (1/3)πr²h
     double volume(double radius, double height, char shape)
     {
-        if (shape == 'c') // 'c' for cone
+        if (shape == 'c')
             return (3.1416 * radius * radius * height) / 3;
         else
-            return -1; // Error case
+            return -1;
     }
-
-    // Volume of Cylinder: V = πr²h
     double volume(double radius, double height, int shape)
     {
-        if (shape == 1) // 1 for cylinder
+        if (shape == 1)
             return 3.1416 * radius * radius * height;
         else
-            return -1; // Error case
+            return -1;
     }
-
-    // Volume of Sphere: V = (4/3)πr³
     double volume(double radius, char shape)
     {
-        if (shape == 's') // 's' for sphere
+        if (shape == 's')
             return (4.0 / 3) * 3.1416 * radius * radius * radius;
         else
-            return -1; // Error case
+            return -1;
     }
 };
 
@@ -101,7 +92,6 @@ int main()
             break;
         }
         case 6:
-            cout << "Exiting program...\n";
             break;
         default:
             cout << "Invalid choice! Please select a valid option.\n";
