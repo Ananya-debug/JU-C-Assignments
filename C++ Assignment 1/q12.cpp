@@ -9,22 +9,16 @@ private:
     string str;
 
 public:
-    // Constructor
     StringManip(string s = "") : str(s) {}
 
-    // Overloaded + operator for string concatenation
     StringManip operator+(const StringManip &ob) const
     {
-        return StringManip(str + ob.str); // Concatenates two strings
+        return StringManip(str + ob.str); 
     }
-
-    // Function to reverse the string
     void reverseString()
     {
         reverse(str.begin(), str.end());
     }
-
-    // Display function
     void display() const
     {
         cout << str << endl;
