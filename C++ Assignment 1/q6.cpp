@@ -9,7 +9,6 @@ private:
     int year;
 
 public:
-    // Constructor to initialize the year and check if it's a leap year
     LeapYearChecker(int y)
     {
         year = y;
@@ -20,12 +19,6 @@ public:
         else
             cout << year << " is NOT a Leap Year." << endl;
     }
-
-    // Destructor
-    ~LeapYearChecker()
-    {
-        cout << "Exiting the program. Object destroyed." << endl;
-    }
 };
 
 int main()
@@ -33,8 +26,6 @@ int main()
     int year;
     cout << "Enter a year: ";
     cin >> year;
-
-    // Creating an object, which invokes the constructor
     LeapYearChecker obj(year);
 
     return 0;
