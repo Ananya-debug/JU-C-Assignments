@@ -9,34 +9,26 @@ private:
     int real, imag;
 
 public:
-    // Default Constructor (No Arguments)
+
     Complex()
     {
         real = 0;
         imag = 0;
     }
-
-    // Constructor with One Argument (Real Part Only)
     Complex(int r)
     {
         real = r;
         imag = 0;
     }
-
-    // Constructor with Two Arguments (Real and Imaginary Parts)
     Complex(int r, int i)
     {
         real = r;
         imag = i;
     }
-
-    // Function to display the complex number
     void show()
     {
         cout << real << " + " << imag << "i" << endl;
     }
-
-    // Function to add two complex numbers
     Complex sum(Complex obj)
     {
         Complex temp;
@@ -48,7 +40,6 @@ public:
 
 int main()
 {
-    // Creating objects using different constructors
     Complex C1;        // Default Constructor
     Complex C2(5);     // Constructor with one argument
     Complex C3(3, 4);  // Constructor with two arguments
