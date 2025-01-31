@@ -6,17 +6,15 @@ using namespace std;
 class Calculator
 {
 public:
-    // Function to reverse the digits of an integer
     void calculate(int m, char ch)
     {
-        // Check if number has more than one digit
         if (m < 10)
         {
             cout << "Error: The number must have more than 1 digit." << endl;
             return;
         }
 
-        if (ch == 'r') // Reverse the number
+        if (ch == 'r')
         {
             int rev = 0, temp = m;
             while (temp > 0)
@@ -26,7 +24,7 @@ public:
             }
             cout << "Reversed Number: " << rev << endl;
         }
-        else if (ch == 'p') // Check if the number is prime
+        else if (ch == 'p')
         {
             if (m < 2)
             {
@@ -35,7 +33,7 @@ public:
             }
 
             bool isPrime = true;
-            for (int i = 2; i * i <= m; i++) // Checking divisibility up to sqrt(m)
+            for (int i = 2; i * i <= m; i++)
             {
                 if (m % i == 0)
                 {
